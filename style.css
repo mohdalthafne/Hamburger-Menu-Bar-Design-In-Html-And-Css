@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e4e9f7;
+}
+.icons{
+    position: relative;
+    height: 65px;
+    width: 65px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 6px;
+    transition: all .5s ease; 
+}
+.icons i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #333;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.icons i.close{
+    opacity: 0;
+}
+.icons.active{
+    background: #ff6d67;
+}
+.icons.active i.close{
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(180deg);
+    color: #fff;
+}
+.icons.active i.open{
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
